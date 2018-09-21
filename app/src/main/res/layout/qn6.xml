@@ -24,7 +24,7 @@
             app:popupTheme="@style/Theme.AppCompat">
 
             <ImageButton
-                android:id="@+id/back"
+                android:id="@+id/back1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
@@ -35,6 +35,7 @@
                 android:id="@+id/kleos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:background="@color/colorPrimary"
                 android:fontFamily="@font/caviardreams"
                 android:lineSpacingExtra="8sp"
@@ -67,23 +68,24 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_above="@+id/center"
-        android:layout_marginBottom="100dp"
-
         android:layout_centerHorizontal="true"
 
+        android:layout_marginBottom="100dp"
+
         android:background="@drawable/button" />
+
     <TextView
-       android:textColor="#FFC107"
         android:id="@+id/tv1"
         android:layout_width="30dp"
         android:layout_height="30dp"
-
-
         android:layout_above="@+id/center"
-        android:layout_marginBottom="130dp"
+
 
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130dp"
+
         android:gravity="center"
+        android:textColor="#FFC107"
 
         />
     <Button

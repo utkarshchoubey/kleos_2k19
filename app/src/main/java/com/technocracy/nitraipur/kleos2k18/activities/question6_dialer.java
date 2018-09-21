@@ -12,15 +12,13 @@ import com.technocracy.nitraipur.kleos2k18.R;
 import java.util.Random;
 
 public class question6_dialer extends Activity  implements View.OnClickListener{
-    private static Random rno=new Random();
-    private TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7,tv8,tv9,tv10;
-    private Button B1,B2,B3,B4,B5,B6,B7,B8,B9,B10;
+    public TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7,tv8,tv9,tv10;
+    public Button B1,B2,B3,B4,B5,B6,B7,B8,B9,B10;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.qn6);
-        tv1 = (TextView) findViewById(R.id.tv1);
-        B1 = (Button) findViewById(R.id.B1);
+        tv1 = (TextView) findViewById(R.id.tv1);B1 = (Button) findViewById(R.id.B1);
         tv2 = (TextView) findViewById(R.id.tv2);B2 = (Button) findViewById(R.id.B2);
         tv3 = (TextView) findViewById(R.id.tv3);
         B3 = (Button) findViewById(R.id.B3); tv4 = (TextView) findViewById(R.id.tv4);
@@ -45,41 +43,64 @@ public class question6_dialer extends Activity  implements View.OnClickListener{
     }
         public void onClick(View v) {
 
-            int random=rno.nextInt(50)+1;
-            B1.setText(""+random);
-            tv1.setText(String.valueOf(random+8));
-            random=rno.nextInt(50)+1;
-            B2.setText(""+random);
-            tv2.setText(String.valueOf(random+3));
-            random=rno.nextInt(50)+1;
-            B3.setText(""+random);
-            tv3.setText(String.valueOf(random+4));
-            random=rno.nextInt(50)+1;
-            B4.setText(""+random);
-            tv4.setText(String.valueOf(random+9));
-            random=rno.nextInt(50)+1;
-            B5.setText(""+random);
-            tv5.setText(String.valueOf(random+0));
-            random=rno.nextInt(50)+1;
-            B6.setText(""+random);
-            tv6.setText(String.valueOf(random+4));
-            random=rno.nextInt(50)+1;
-            B7.setText(""+random);
-            tv7.setText(String.valueOf(random+3));
-            random=rno.nextInt(50)+1;
-            B8.setText(""+random);
-            tv8.setText(String.valueOf(random+0));
-            random=rno.nextInt(50)+1;
-            B9.setText(""+random);
-            tv9.setText(String.valueOf(random+2));
-            random=rno.nextInt(50)+1;
-            B10.setText(""+random);
-            tv10.setText(String.valueOf(random+7));
+            char c = random();
 
+            B1.setText(""+c);
+            char c2 = (char) ((char) c+8);
+            tv1.setText(""+c2);
 
+            c = random();
+            B2.setText(""+c);
+            c2 = (char) ((char)c+3);
+            tv2.setText(""+c2);
+
+            c = random();
+            B3.setText(""+c);
+            c2 = (char) ((char)c+4);
+            tv3.setText(""+c2);
+
+            c = random();
+            B4.setText(""+c);
+            c2 = (char) ((char)c+9);
+            tv4.setText(""+c2);
+
+            c = random();
+            B5.setText(""+c);
+            tv5.setText(""+c);
+
+            c = random();
+            B6.setText(""+c);
+            c2 = (char) ((char)c+4);
+            tv6.setText(""+c2);
+
+            c = random();
+            B7.setText(""+c);
+            c2 = (char) ((char)c+3);
+            tv7.setText(""+c2);
+
+            c = random();
+            B8.setText(""+c);
+            tv8.setText(""+c);
+
+            c = random();
+            B9.setText(""+c);
+            c2 = (char) ((char)c+2);
+            tv9.setText(""+c2);
+
+            c = random();
+            B10.setText(""+c);
+            c2 = (char) ((char)c+7);
+            tv10.setText(""+c2);
 
 
         }
+    public char random(){
+        Random r = new Random();
+        int Low = 65;
+        int High = 81;
+        int result = r.nextInt(High-Low) + Low;
+        return (char) result;
+    }
 
 
     public void exit(View view) {

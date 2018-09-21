@@ -54,7 +54,6 @@ public class LeaderboardFragment extends Fragment {
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
               if(response.isSuccessful()){
                   indicatorView.hide();
-                 response.body();
                   if(response.body().size() >= 10){
                       def.setVisibility(View.GONE);
                       rv.setVisibility(View.VISIBLE);
