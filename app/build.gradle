@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.technocracy.nitraipur.kleos2k18"
+        applicationId "com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos"
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
