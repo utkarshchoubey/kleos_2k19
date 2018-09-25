@@ -18,6 +18,8 @@ import am.appwise.components.ni.NoInternetDialog;
 public class SplashScreen extends AwesomeSplash  {
     UserPreferences userPreferences;
     NoInternetDialog noInternetDialog ;
+    boolean doubleBackToExitPressedOnce = false;
+
     @Override
     public void initSplash(ConfigSplash configSplash) {
         userPreferences = new UserPreferences(this);
@@ -40,11 +42,10 @@ public class SplashScreen extends AwesomeSplash  {
         configSplash.setTitleTextSize(40f);
         configSplash.setAnimTitleDuration(3000);
         configSplash.setAnimTitleTechnique(Techniques.FadeIn);
-        configSplash.setTitleFont("fonts/caviardreams.ttf");
+//        configSplash.setTitleFont("fonts/caviardreams.ttf");
 
 
     }
-
 
     @Override
     public void animationsFinished() {
@@ -65,8 +66,6 @@ public class SplashScreen extends AwesomeSplash  {
     protected void onDestroy() {
         super.onDestroy();
     }
-
-    boolean doubleBackToExitPressedOnce = false;
 
     @Override
     public void onBackPressed() {
