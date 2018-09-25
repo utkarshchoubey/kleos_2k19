@@ -57,9 +57,9 @@ public class LeaderboardRecylerAdapter extends RecyclerView.Adapter<LeaderboardR
         RelativeLayout main;
         public LeaderBoardViewHolder(View itemView) {
             super(itemView);
-            main = (RelativeLayout)itemView.findViewById(R.id.leaderboardMain);
-             name=(TextView)itemView.findViewById(R.id.leaderboardnameTV);
-             level=(TextView)itemView.findViewById(R.id.leaderboardlevelTV);
+            main = itemView.findViewById(R.id.leaderboardMain);
+            name = itemView.findViewById(R.id.leaderboardnameTV);
+            level = itemView.findViewById(R.id.leaderboardlevelTV);
         }
     }
 }

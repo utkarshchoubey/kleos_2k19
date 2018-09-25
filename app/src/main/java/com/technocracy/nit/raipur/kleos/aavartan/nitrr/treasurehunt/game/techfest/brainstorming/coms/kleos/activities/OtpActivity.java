@@ -2,11 +2,11 @@ package com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfe
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -35,7 +35,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
 import static maes.tech.intentanim.CustomIntent.customType;
 
 public class OtpActivity extends AppCompatActivity {
@@ -54,12 +53,12 @@ public class OtpActivity extends AppCompatActivity {
 
         userPreferences = new UserPreferences(this);
 
-        AnimatedGradientTextView textView = (AnimatedGradientTextView)findViewById(R.id.kleos);
+        AnimatedGradientTextView textView = findViewById(R.id.kleos);
         textView.setTextSize(getResources().getDimension(R.dimen.textsize));
 
-        resend = (Button)findViewById(R.id.resend);
+        resend = findViewById(R.id.resend);
         resend.setVisibility(View.INVISIBLE);
-        otpButton = (Button)findViewById(R.id.otpButton);
+        otpButton = findViewById(R.id.otpButton);
         Slice slice = new Slice(resend);
         slice.setRadius(8f);
         slice.setColor(Color.parseColor("#00BB84"));
@@ -67,15 +66,15 @@ public class OtpActivity extends AppCompatActivity {
         slice1.setRadius(8f);
         slice1.setColor(Color.parseColor("#00BB84"));
 
-        indicatorView = (AVLoadingIndicatorView)findViewById(R.id.aviOtp);
+        indicatorView = findViewById(R.id.aviOtp);
         indicatorView.hide();
 
-        otpEdit = (TextInputEditText)findViewById(R.id.otpEditText);
+        otpEdit = findViewById(R.id.otpEditText);
 
         apiBase = ApiBase.getClient().create(ApiEndpoints.class);
 
         resend.setVisibility(View.INVISIBLE);
-        mCvCountdownView = (CountdownView)findViewById(R.id.countdown);
+        mCvCountdownView = findViewById(R.id.countdown);
         mCvCountdownView.start(90000);
 
         mCvCountdownView.setOnCountdownEndListener(new CountdownView.OnCountdownEndListener() {

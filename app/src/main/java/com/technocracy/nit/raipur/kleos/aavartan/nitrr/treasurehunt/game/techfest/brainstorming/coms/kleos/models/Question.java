@@ -10,6 +10,17 @@ import com.google.gson.annotations.SerializedName;
 
 public class Question extends Message implements Parcelable {
 
+    public static final Creator<Question> CREATOR = new Creator<Question>() {
+        @Override
+        public Question createFromParcel(Parcel in) {
+            return new Question(in);
+        }
+
+        @Override
+        public Question[] newArray(int size) {
+            return new Question[size];
+        }
+    };
     @SerializedName("title")
     @Expose
     public String title;
@@ -19,6 +30,12 @@ public class Question extends Message implements Parcelable {
     @SerializedName("image")
     @Expose
     public String image;
+
+    public Question(Parcel in) {
+        title = in.readString();
+        question = in.readString();
+        image = in.readString();
+    }
 
     @Override
     public int describeContents() {
@@ -31,24 +48,6 @@ public class Question extends Message implements Parcelable {
         dest.writeString(question);
         dest.writeString(image);
     }
-
-    public Question(Parcel in) {
-        title = in.readString();
-        question = in.readString();
-        image = in.readString();
-    }
-
-    public static final Creator<Question> CREATOR = new Creator<Question>() {
-        @Override
-        public Question createFromParcel(Parcel in) {
-            return new Question(in);
-        }
-
-        @Override
-        public Question[] newArray(int size) {
-            return new Question[size];
-        }
-    };
 
     public String getTitle() {
         return title;

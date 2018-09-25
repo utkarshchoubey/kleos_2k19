@@ -2,11 +2,11 @@ package com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfe
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -44,6 +44,8 @@ public class LoginActivity extends AppCompatActivity {
  UserPreferences userPreferences;
  ApiEndpoints apiBase;
     AnimatedGradientTextView textView;
+    boolean doubleBackToExitPressedOnce = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,27 +54,27 @@ public class LoginActivity extends AppCompatActivity {
 
         userPreferences = new UserPreferences(this);
 
-        textView = (AnimatedGradientTextView)findViewById(R.id.kleos);
+        textView = findViewById(R.id.kleos);
         textView.setTextSize(getResources().getDimension(R.dimen.textsize));
 
-        signupPage = (Button)findViewById(R.id.signupButton);
-        loginPage = (Button)findViewById(R.id.loginButton);
+        signupPage = findViewById(R.id.signupButton);
+        loginPage = findViewById(R.id.loginButton);
 
-        indicatorView = (AVLoadingIndicatorView)findViewById(R.id.avi);
+        indicatorView = findViewById(R.id.avi);
         indicatorView.hide();
 
-        phone = (EditText)findViewById(R.id.phoneNo);
-        pass = (EditText)findViewById(R.id.pass);
-        confirmPass = (EditText)findViewById(R.id.confirmPass);
+        phone = findViewById(R.id.phoneNo);
+        pass = findViewById(R.id.pass);
+        confirmPass = findViewById(R.id.confirmPass);
 
-        passH = (TextInputLayout)findViewById(R.id.passHint);
-        confirmH = (TextInputLayout)findViewById(R.id.confirmHint);
-        phoneH = (TextInputLayout)findViewById(R.id.phoneHint);
+        passH = findViewById(R.id.passHint);
+        confirmH = findViewById(R.id.confirmHint);
+        phoneH = findViewById(R.id.phoneHint);
 
         signupPage.setTextColor(Color.parseColor("#FFFFFF"));
         loginPage.setTextColor(Color.parseColor("#89FFFFFF"));
 
-        signup = (Button)findViewById(R.id.signup);
+        signup = findViewById(R.id.signup);
 
         Slice slice = new Slice(signup);
         slice.setRadius(8f);
@@ -440,8 +442,6 @@ public class LoginActivity extends AppCompatActivity {
 
         }
     }
-
-    boolean doubleBackToExitPressedOnce = false;
 
     @Override
     public void onBackPressed() {

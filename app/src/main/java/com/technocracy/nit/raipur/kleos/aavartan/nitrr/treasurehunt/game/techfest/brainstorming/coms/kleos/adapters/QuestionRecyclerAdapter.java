@@ -118,11 +118,11 @@ public class QuestionRecyclerAdapter extends RecyclerView.Adapter<QuestionRecycl
         AVLoadingIndicatorView avi;
         public QuestionViewHolder(View itemView) {
             super(itemView);
-            questionCard = (ConstraintLayout)itemView.findViewById(R.id.questionCard);
-            avi = (AVLoadingIndicatorView)itemView.findViewById(R.id.avi);
-            questionTextView = (TextView)itemView.findViewById(R.id.questionTitle);
-            questionContent = (TextView)itemView.findViewById(R.id.questionContent);
-            bookmark = (ImageView)itemView.findViewById(R.id.bookmark);
+            questionCard = itemView.findViewById(R.id.questionCard);
+            avi = itemView.findViewById(R.id.avi);
+            questionTextView = itemView.findViewById(R.id.questionTitle);
+            questionContent = itemView.findViewById(R.id.questionContent);
+            bookmark = itemView.findViewById(R.id.bookmark);
         }
 
 
