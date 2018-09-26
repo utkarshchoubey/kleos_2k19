@@ -84,7 +84,7 @@
             android:paddingTop="5dp"
             android:text="utkarshchoubey629@gmail.com"
             android:textColor="#ffffff"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
         <TextView

@@ -38,5 +38,5 @@
         android:padding="2dp"
         android:text="TextView"
         android:textColor="@color/colorPrimary"
-        android:textSize="30sp" />
+        android:textSize="30dp" />
 </RelativeLayout>

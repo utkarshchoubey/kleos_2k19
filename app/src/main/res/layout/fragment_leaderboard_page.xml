@@ -17,7 +17,7 @@
         android:text="Currently there is no Winner"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/leaderboadRV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         userPreferences = new UserPreferences(this);
 
         textView = findViewById(R.id.kleos);
-        textView.setTextSize(getResources().getDimension(R.dimen.textsize));
+//        textView.setTextSize(getResources().getDimension(R.dimen.textsize));
 
         signupPage = findViewById(R.id.signupButton);
         loginPage = findViewById(R.id.loginButton);

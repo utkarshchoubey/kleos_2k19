@@ -39,11 +39,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
-                android:lineSpacingExtra="8sp"
+                android:lineSpacingExtra="8dp"
                 android:text="Storyline"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
-                android:textSize="36sp"
+                android:textSize="36dp"
                 android:typeface="monospace"
                 app:angle="45"
                 app:colors="@array/main_gradient"
@@ -84,10 +84,10 @@
                 android:id="@+id/content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5sp"
+                android:padding="5dp"
                 android:text="@string/storyline"
                 android:textColor="@color/white"
-                android:textSize="25sp" />
+                android:textSize="25dp" />
 
             <TextView
                 android:id="@+id/t1"
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:text="* The answers are case sensitive."
                 android:textColor="#ffffff"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:text="* Pinch in the images with two fingers to zoom it."
                 android:textColor="#ffffff"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:text="* Internet is your best friend"
                 android:textColor="#ffffff"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -131,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:text="* There is no limit to number of attempts"
                 android:textColor="#ffffff"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -140,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:text="* Do not share answers"
                 android:textColor="#ffffff"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -151,7 +151,7 @@
                 android:maxLines="2"
                 android:text="* If you are caught using unfair means,you will be strictly eliminated"
                 android:textColor="#ffffff"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -160,7 +160,7 @@
                 android:layout_height="wrap_content"
                 android:text="For any further details contact"
                 android:textColor="#ffffff"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -169,11 +169,9 @@
                 android:layout_height="wrap_content"
                 android:text="Namrata:8109308499"
                 android:textColor="#ffffff"
-                android:textSize="15sp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>
-
-
 </android.support.constraint.ConstraintLayout>
