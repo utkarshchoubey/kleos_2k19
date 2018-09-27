@@ -48,13 +48,13 @@ public class ProfileFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         this.depth = DepthProvider.getDepth(view);
-        TextView nameV = (TextView) view.findViewById(R.id.nameV);
-        TextView emailV = (TextView) view.findViewById(R.id.emailV);
-        TextView phoneV = (TextView) view.findViewById(R.id.phoneV);
-        TextView collegeV = (TextView) view.findViewById(R.id.collegeV);
-        TextView level = (TextView)view.findViewById(R.id.levelV);
-        AVLoadingIndicatorView avi =(AVLoadingIndicatorView)view.findViewById(R.id.avi);
-        CircleImageView circleImageView = (CircleImageView)view.findViewById(R.id.profile_image);
+        TextView nameV = view.findViewById(R.id.nameV);
+        TextView emailV = view.findViewById(R.id.emailV);
+        TextView phoneV = view.findViewById(R.id.phoneV);
+        TextView collegeV = view.findViewById(R.id.collegeV);
+        TextView level = view.findViewById(R.id.levelV);
+        AVLoadingIndicatorView avi = view.findViewById(R.id.avi);
+        CircleImageView circleImageView = view.findViewById(R.id.profile_image);
 
         avi.show();
         nameV.setVisibility(View.INVISIBLE);

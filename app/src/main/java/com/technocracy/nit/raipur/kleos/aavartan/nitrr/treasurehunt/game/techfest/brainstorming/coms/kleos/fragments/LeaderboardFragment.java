@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
 import com.github.florent37.depth.Depth;
 import com.github.florent37.depth.DepthProvider;
 import com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.R;
@@ -41,11 +40,11 @@ public class LeaderboardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_leaderboard_page, container, false);
-        AVLoadingIndicatorView indicatorView =(AVLoadingIndicatorView)view.findViewById(R.id.avi);
+        AVLoadingIndicatorView indicatorView = view.findViewById(R.id.avi);
         indicatorView.show();
-        TextView def = (TextView)view.findViewById(R.id.defaultTV);
+        TextView def = view.findViewById(R.id.defaultTV);
         def.setVisibility(View.INVISIBLE);
-        RecyclerView rv = (RecyclerView)view.findViewById(R.id.leaderboadRV);
+        RecyclerView rv = view.findViewById(R.id.leaderboadRV);
         rv.setVisibility(View.INVISIBLE);
         ApiEndpoints apiBase= ApiBase.getClient().create(ApiEndpoints.class);
         Call<List<User>> call = apiBase.getLeaderboard();

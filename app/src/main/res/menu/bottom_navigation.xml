@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimary"
     app:background="@color/transparent"
-    app:bbn_rippleColor="@color/colorPrimary"
-    app:bbn_itemColorInactive="@color/colorWhite"
-    app:bbn_itemColorDisabled="@color/transparent"
     app:bbn_itemColorActive="@color/colorPrimaryDark"
+    app:bbn_itemColorDisabled="@color/transparent"
+    app:bbn_itemColorInactive="@color/colorWhite"
+    app:bbn_rippleColor="@color/colorPrimary"
     >
     <item
         android:id="@+id/questionTab"
