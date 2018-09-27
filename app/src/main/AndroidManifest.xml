@@ -64,9 +64,6 @@
 
         </activity>
         <activity
-            android:name=".activities.TeamActivity"
-            android:screenOrientation="nosensor" />
-        <activity
             android:name=".activities.SponsorsActivity"
             android:screenOrientation="nosensor"/>
         <activity

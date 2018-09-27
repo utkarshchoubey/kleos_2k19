@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 
+import com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.R;
+
 public class UserPreferences {
     private Context ct;
 
@@ -12,7 +14,10 @@ public class UserPreferences {
         this.ct = ct;
     }
 
-
+    public String getUsername() {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ct);
+        return preferences.getString("username", "");
+    }
 
     public void setUsername(String username) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ct);
@@ -21,10 +26,12 @@ public class UserPreferences {
         editor.putString("username", username);
         editor.apply();
     }
-    public String getUsername() {
+
+    public String getName() {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ct);
-        return preferences.getString("username", "");
+        return preferences.getString("name", "");
     }
+
     public void setName(String name) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ct);
         SharedPreferences.Editor editor = preferences.edit();
@@ -32,10 +39,12 @@ public class UserPreferences {
         editor.putString("name", name);
         editor.apply();
     }
-    public String getName() {
+
+    public String getLevel() {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ct);
-        return preferences.getString("name", "");
+        return preferences.getString("level", "0");
     }
+
     public void setLevel(String level) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ct);
         SharedPreferences.Editor editor = preferences.edit();
@@ -43,9 +52,10 @@ public class UserPreferences {
         editor.putString("level", level);
         editor.apply();
     }
-    public String getLevel() {
+
+    public String getPassword() {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ct);
-        return preferences.getString("level", "0");
+        return preferences.getString("password", "");
     }
 
     public void setPassword(String password) {
@@ -54,10 +64,6 @@ public class UserPreferences {
 
         editor.putString("password", password);
         editor.apply();
-    }
-    public String getPassword() {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ct);
-        return preferences.getString("password", "");
     }
 
     public void clearPrefs() {

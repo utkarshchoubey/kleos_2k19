@@ -1,11 +1,11 @@
 package com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.activities;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
@@ -39,7 +39,6 @@ import it.sephiroth.android.library.bottomnavigation.BottomNavigation;
 import static maes.tech.intentanim.CustomIntent.customType;
 
 public class HomeActivity extends AppCompatActivity {
-    private SlidingRootNav slidingRootNav;
     AnimatedGradientTextView homeTextview;
     RelativeLayout mainRelativeLayout;
     FrameLayout mainView;
@@ -48,22 +47,25 @@ public class HomeActivity extends AppCompatActivity {
     int nextFragmentPos = 0;
     ConstraintLayout mainLayout;
     UserPreferences preferences;
+    boolean doubleBackToExitPressedOnce = false;
+    private SlidingRootNav slidingRootNav;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         customType(this, "fadein-to-fadeout");
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         preferences = new UserPreferences(this);
 
-        mainLayout = (ConstraintLayout)findViewById(R.id.activity_home);
+        mainLayout = findViewById(R.id.activity_home);
 
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
                 WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-        FrameLayout fm = (FrameLayout)findViewById(R.id.mainFrameLayout);
+        FrameLayout fm = findViewById(R.id.mainFrameLayout);
         final Depth depth = DepthProvider.getDepth(fm);
         depth.setFragmentContainer(R.id.mainFrameLayout);
         depth.animate().enter(new QuestionsFragment()).start();
@@ -82,9 +84,9 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
-        homeTextview = (AnimatedGradientTextView) findViewById(R.id.kleos);
+        homeTextview = findViewById(R.id.kleos);
 
-        bottomNavigation= (BottomNavigation)findViewById(R.id.bottomNavigation);
+        bottomNavigation = findViewById(R.id.bottomNavigation);
         bottomNavigation.setOnMenuItemClickListener(new BottomNavigation.OnMenuItemSelectionListener() {
             @Override
             public void onMenuItemSelect(int itemID, int position, boolean fromUser) {
@@ -201,14 +203,14 @@ public class HomeActivity extends AppCompatActivity {
         View v = slidingRootNav.getLayout().getChildAt(0);
         CircleImageView imageView = v.findViewById(R.id.drawerImg);
         imageView.setImageURI(preferences.getProfileImage());
-        TextView nameV =(TextView) v.findViewById(R.id.drawerName);
+        TextView nameV = v.findViewById(R.id.drawerName);
         nameV.setText(preferences.getName());
-        TextView levelV = (TextView) v.findViewById(R.id.drawerLevel);
+        TextView levelV = v.findViewById(R.id.drawerLevel);
         levelV.setText("Level ".concat(preferences.getLevel()));
-        Button logout =(Button) v.findViewById(R.id.logoutB);
-        Button teamB =(Button) v.findViewById(R.id.teamB);
-        Button storylineB =(Button) v.findViewById(R.id.storylineB);
-        Button sponsorsB =(Button) v.findViewById(R.id.sponsorsB);
+        Button logout = v.findViewById(R.id.logoutB);
+//        Button teamB =(Button) v.findViewById(R.id.teamB);
+        Button storylineB = v.findViewById(R.id.storylineB);
+        Button sponsorsB = v.findViewById(R.id.sponsorsB);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -218,13 +220,13 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         });
-        teamB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(HomeActivity.this, TeamActivity.class);
-                startActivity(i);
-            }
-        });
+//        teamB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(HomeActivity.this, TeamActivity.class);
+//                startActivity(i);
+//            }
+//        });
         storylineB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -240,8 +242,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
         }
-
-    boolean doubleBackToExitPressedOnce = false;
 
     @Override
     public void onBackPressed() {
