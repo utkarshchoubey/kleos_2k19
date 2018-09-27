@@ -40,11 +40,13 @@ public class LeaderboardRecylerAdapter extends RecyclerView.Adapter<LeaderboardR
         slice.setRipple(1);
         slice.setRadius(8.0f);
         slice.setElevation(4.0f);
-        String n = users.get(position).firstName.toString().concat(" ".concat(users.get(position).lastName).toString());
-        String l = "Level ".concat(users.get(position).level);
-        holder.name.setText(n);
-        holder.level.setText(l);
-
+        try {
+            String n = users.get(position).firstName.toString().concat(" ".concat(users.get(position).lastName).toString());
+            String l = "Level ".concat(users.get(position).level);
+            holder.name.setText(n);
+            holder.level.setText(l);
+        } catch (NullPointerException e) {
+        }
     }
 
     @Override
@@ -57,9 +59,9 @@ public class LeaderboardRecylerAdapter extends RecyclerView.Adapter<LeaderboardR
         RelativeLayout main;
         public LeaderBoardViewHolder(View itemView) {
             super(itemView);
-            main = (RelativeLayout)itemView.findViewById(R.id.leaderboardMain);
-             name=(TextView)itemView.findViewById(R.id.hinttv1);
-             level=(TextView)itemView.findViewById(R.id.leaderboardlevelTV);
+            main = itemView.findViewById(R.id.leaderboardMain);
+            name = itemView.findViewById(R.id.hinttv1);
+            level = itemView.findViewById(R.id.leaderboardlevelTV);
         }
     }
 }
