@@ -151,7 +151,9 @@
             android:hint="College"
             android:inputType="textCapWords|textPersonName"
             android:textColor="@color/white"
-            android:textColorHint="@color/whiteFade" />
+            android:textColorHint="@color/whiteFade"
+            android:textAllCaps="true"
+            />
     </android.support.design.widget.TextInputLayout>
 
     <Button

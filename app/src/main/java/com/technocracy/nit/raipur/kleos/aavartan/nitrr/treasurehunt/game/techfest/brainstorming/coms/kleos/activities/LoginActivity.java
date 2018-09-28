@@ -286,7 +286,6 @@ public class LoginActivity extends AppCompatActivity {
                                 Intent i = new Intent(LoginActivity.this, OtpActivity.class);
                                 startActivity(i);
                                 finish();
-
                             }else{
                                 Toasty.error(LoginActivity.this, "Some Thing Went Wrong", Toast.LENGTH_SHORT, true).show();
                                 indicatorView.hide();
@@ -295,7 +294,6 @@ public class LoginActivity extends AppCompatActivity {
                                 loginPage.setEnabled(true);
                                 signupPage.setEnabled(true);
                             }
-
                         }
 
                         @Override

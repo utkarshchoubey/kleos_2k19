@@ -68,6 +68,7 @@
         </activity>
         <activity
             android:name=".activities.ProfileSetupActivity"
+            android:windowSoftInputMode="adjustResize"
             android:screenOrientation="portrait"
             >
 

@@ -141,6 +141,7 @@
             android:id="@+id/phoneHint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/whiteFade"
             app:layout_constraintBottom_toTopOf="@+id/passHint"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -159,7 +160,9 @@
                 android:imeOptions="actionDone"
                 android:inputType="phone"
                 android:textColorHint="@color/whiteFade"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:typeface="monospace"
+                />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -215,7 +218,9 @@
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:textColor="@color/white"
-                android:textColorHint="@color/whiteFade" />
+                android:textColorHint="@color/whiteFade"
+                android:typeface="monospace"
+                />
 
         </android.support.design.widget.TextInputLayout>
 
