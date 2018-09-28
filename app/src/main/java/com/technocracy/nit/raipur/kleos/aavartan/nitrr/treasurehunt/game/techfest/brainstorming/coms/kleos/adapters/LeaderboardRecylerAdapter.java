@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -40,11 +41,13 @@ public class LeaderboardRecylerAdapter extends RecyclerView.Adapter<LeaderboardR
         slice.setRipple(1);
         slice.setRadius(8.0f);
         slice.setElevation(4.0f);
-        String n = users.get(position).firstName.toString().concat(" ".concat(users.get(position).lastName).toString());
-        String l = "Level ".concat(users.get(position).level);
-        holder.name.setText(n);
-        holder.level.setText(l);
-
+        try {
+            String n = users.get(position).firstName.toString().concat(" ".concat(users.get(position).lastName).toString());
+            String l = "Level ".concat(users.get(position).level);
+            holder.name.setText(n);
+            holder.level.setText(l);
+        } catch (NullPointerException e) {
+        }
     }
 
     @Override
@@ -54,11 +57,11 @@ public class LeaderboardRecylerAdapter extends RecyclerView.Adapter<LeaderboardR
 
     public class LeaderBoardViewHolder extends RecyclerView.ViewHolder {
         TextView name,level;
-        RelativeLayout main;
+        LinearLayout main;
         public LeaderBoardViewHolder(View itemView) {
             super(itemView);
             main = itemView.findViewById(R.id.leaderboardMain);
-            name = itemView.findViewById(R.id.leaderboardnameTV);
+            name = itemView.findViewById(R.id.hinttv1);
             level = itemView.findViewById(R.id.leaderboardlevelTV);
         }
     }

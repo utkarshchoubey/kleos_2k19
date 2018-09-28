@@ -87,7 +87,7 @@
                 android:padding="5sp"
                 android:text="@string/storyline"
                 android:textColor="@color/white"
-                android:textSize="25sp" />
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/t1"

@@ -2,10 +2,10 @@ package com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfe
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
+import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +29,6 @@ import com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfes
 import com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.restapi.ApiEndpoints;
 import com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.utils.UserPreferences;
 import com.viven.imagezoom.ImageZoomHelper;
-
 import am.appwise.components.ni.NoInternetDialog;
 import es.dmoral.toasty.Toasty;
 import io.github.mthli.slice.Slice;
@@ -51,33 +50,6 @@ public class QuestionActivity extends YouTubeBaseActivity {
     YouTubePlayerView videoView;
     ImageView img, img2;
     int pos;
-    Handler h2 = new Handler();
-    Runnable r2 = new Runnable() {
-        @Override
-        public void run() {
-            switch (pos) {
-                case 1:
-                    int curBrightnessValue = android.provider.Settings.System.getInt(getContentResolver(), android.provider.Settings.System.SCREEN_BRIGHTNESS, -1);
-                    if (curBrightnessValue < 130) {
-                        textView1.setText("G");
-                        textView2.setText("");
-                        textView3.setText("B");
-                        textView4.setText("");
-                        textView5.setText("E");
-                    } else {
-                        textView1.setText("");
-                        textView2.setText("C");
-                        textView3.setText("");
-                        textView4.setText("F");
-                        textView5.setText("");
-                    }
-                    break;
-                default:
-                    h2.removeCallbacks(r2);
-            }
-            h2.postDelayed(r2, 500);
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,19 +58,19 @@ public class QuestionActivity extends YouTubeBaseActivity {
         customType(this, "fadein-to-fadeout");
         userPreferences = new UserPreferences(this);
 
-        img = findViewById(R.id.img);
-        img2 = findViewById(R.id.img2);
+        img = (ImageView) findViewById(R.id.img);
+        img2 = (ImageView) findViewById(R.id.img2);
         imageZoomHelper = new ImageZoomHelper(this);
         ImageZoomHelper.setViewZoomable(findViewById(R.id.img));
         ImageZoomHelper.setViewZoomable(findViewById(R.id.img2));
-        videoView = findViewById(R.id.video);
-        tv = findViewById(R.id.questionText);
-        tv1 = findViewById(R.id.kleos);
-        til = findViewById(R.id.til);
-        ed = findViewById(R.id.answer);
-        LinearLayout linearLayout = findViewById(R.id.ques1);
-        button = findViewById(R.id.submitB);
-        dialer = findViewById(R.id.dialer);
+        videoView = (YouTubePlayerView) findViewById(R.id.video);
+        tv = (TextView) findViewById(R.id.questionText);
+        tv1 = (TextView) findViewById(R.id.kleos);
+        til = (TextInputLayout) findViewById(R.id.til);
+        ed = (EditText) findViewById(R.id.answer);
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.ques1);
+        button = (Button) findViewById(R.id.submitB);
+        dialer = (Button) findViewById(R.id.dialer);
         Slice slice = new Slice(button);
         slice.setRadius(8f);
         slice.setColor(Color.parseColor("#00BB84"));
@@ -106,11 +78,11 @@ public class QuestionActivity extends YouTubeBaseActivity {
         slice2.setRadius(8f);
         slice2.setColor(Color.parseColor("#00BB84"));
 
-        textView1 = findViewById(R.id.t1);
-        textView2 = findViewById(R.id.t2);
-        textView3 = findViewById(R.id.t3);
-        textView4 = findViewById(R.id.t4);
-        textView5 = findViewById(R.id.t5);
+        textView1 = (TextView) findViewById(R.id.t1);
+        textView2 = (TextView) findViewById(R.id.t2);
+        textView3 = (TextView) findViewById(R.id.t3);
+        textView4 = (TextView) findViewById(R.id.t4);
+        textView5 = (TextView) findViewById(R.id.t5);
 
 
         q = getIntent().getParcelableExtra("question");
@@ -263,9 +235,9 @@ public class QuestionActivity extends YouTubeBaseActivity {
         int level = Integer.parseInt(userPreferences.getLevel());
 
         if (pos <= level) {
-            button.setVisibility(View.GONE);
-            ed.setVisibility(View.GONE);
-            til.setVisibility(View.GONE);
+            button.setVisibility(View.INVISIBLE);
+            ed.setVisibility(View.INVISIBLE);
+            til.setVisibility(View.INVISIBLE);
             til.setEnabled(false);
             button.setEnabled(false);
             ed.setEnabled(false);
@@ -273,6 +245,34 @@ public class QuestionActivity extends YouTubeBaseActivity {
 
         apiBase = ApiBase.getClient().create(ApiEndpoints.class);
     }
+
+    Handler h2 = new Handler();
+    Runnable r2 = new Runnable() {
+        @Override
+        public void run() {
+            switch (pos) {
+                case 1:
+                    int curBrightnessValue = android.provider.Settings.System.getInt(getContentResolver(), android.provider.Settings.System.SCREEN_BRIGHTNESS, -1);
+                    if (curBrightnessValue < 130) {
+                        textView1.setText("G");
+                        textView2.setText("");
+                        textView3.setText("B");
+                        textView4.setText("");
+                        textView5.setText("E");
+                    } else {
+                        textView1.setText("");
+                        textView2.setText("C");
+                        textView3.setText("");
+                        textView4.setText("F");
+                        textView5.setText("");
+                    }
+                    break;
+                default:
+                    h2.removeCallbacks(r2);
+            }
+            h2.postDelayed(r2, 500);
+        }
+    };
 
     @Override
     protected void onPause() {
@@ -300,7 +300,7 @@ public class QuestionActivity extends YouTubeBaseActivity {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            button.setVisibility(View.INVISIBLE);
+                            button.setEnabled(false);
                         }
                     }, 500);
 
@@ -324,27 +324,28 @@ public class QuestionActivity extends YouTubeBaseActivity {
                                             finish();
                                         }
                                     }, 1000);
-
                                 }
                             });
                         } else {
+                            button.setEnabled(true);
                             Toasty.error(QuestionActivity.this, "Sorry Wrong Answer.Please Try Again!!", Toast.LENGTH_SHORT, true).show();
                             YoYo.with(Techniques.FadeIn).duration(500).playOn(view);
-                            button.setVisibility(View.VISIBLE);
+                            button.setEnabled(true);
                         }
                     }
                 }
 
                 @Override
                 public void onFailure(@NonNull Call<User> call, @NonNull Throwable t) {
-                    YoYo.with(Techniques.FadeIn).duration(500).playOn(view);
+                    button.setEnabled(true);
                     button.setVisibility(View.VISIBLE);
+                    YoYo.with(Techniques.FadeIn).duration(500).playOn(view);
                     NoInternetDialog noInternetDialog = new NoInternetDialog.Builder(QuestionActivity.this).build();
+                    button.setEnabled(true);
                 }
             });
-
-
         } else {
+            button.setEnabled(true);
             ViewTooltip.on(view)
                     .align(ViewTooltip.ALIGN.CENTER)
                     .position(ViewTooltip.Position.TOP)
@@ -359,6 +360,7 @@ public class QuestionActivity extends YouTubeBaseActivity {
                     .show();
             return;
         }
+        button.setEnabled(true);
     }
 
     @Override
@@ -368,18 +370,18 @@ public class QuestionActivity extends YouTubeBaseActivity {
 
     public void playVideo(final String videoId, YouTubePlayerView youTubePlayerView) {
         youTubePlayerView.initialize("AIzaSyCU1NnGxmtqRvM7qJu8XM4d3JxarXbDfzY",
-                new YouTubePlayer.OnInitializedListener() {
-                    @Override
-                    public void onInitializationSuccess(YouTubePlayer.Provider provider,
-                                                        YouTubePlayer youTubePlayer, boolean b) {
-                        youTubePlayer.cueVideo(videoId);
-                    }
+        new YouTubePlayer.OnInitializedListener() {
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider,
+                                                YouTubePlayer youTubePlayer, boolean b) {
+                youTubePlayer.cueVideo(videoId);
+            }
 
-                    @Override
-                    public void onInitializationFailure(YouTubePlayer.Provider provider,
-                                                        YouTubeInitializationResult youTubeInitializationResult) {
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider,
+                YouTubeInitializationResult youTubeInitializationResult) {
 
-                    }
-                });
+            }
+        });
     }
 }

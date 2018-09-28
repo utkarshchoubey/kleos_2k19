@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="#15161d"
     android:orientation="vertical">
-
     <android.support.design.widget.AppBarLayout
         android:id="@+id/answerAppBar"
         android:layout_width="match_parent"
@@ -25,7 +24,7 @@
             app:popupTheme="@style/Theme.AppCompat">
 
             <ImageButton
-                android:id="@+id/back"
+                android:id="@+id/back1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
@@ -36,6 +35,7 @@
                 android:id="@+id/kleos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:background="@color/colorPrimary"
                 android:lineSpacingExtra="8sp"
                 android:text="Dialer"
@@ -87,7 +87,6 @@
         android:textColor="#FFC107"
 
         />
-
     <Button
         android:id="@+id/B6"
         android:layout_width="30dp"
@@ -98,7 +97,6 @@
         android:layout_marginTop="100dp"
 
         android:background="@drawable/button" />
-
     <TextView
         android:id="@+id/tv6"
         android:layout_width="30dp"
@@ -110,7 +108,8 @@
         android:layout_marginTop="130dp"
 
         android:gravity="center"
-        android:textColor="#FFC107" />
+        android:textColor="#FFC107"
+        />
 
     <Button
         android:id="@+id/B2"
@@ -120,8 +119,8 @@
         android:layout_marginBottom="65dp"
         android:layout_marginLeft="50dp"
         android:layout_toRightOf="@id/center"
-        android:background="@drawable/button" />
-
+        android:background="@drawable/button"
+        />
     <TextView
         android:id="@+id/tv2"
         android:layout_width="30dp"
@@ -134,7 +133,6 @@
         android:textColor="#FFC107"
 
         />
-
     <Button
         android:id="@+id/B10"
         android:layout_width="30dp"
@@ -146,7 +144,6 @@
         android:background="@drawable/button"
 
         />
-
     <TextView
         android:id="@+id/tv10"
         android:layout_width="30dp"
@@ -156,8 +153,8 @@
         android:layout_marginRight="90dp"
         android:layout_toLeftOf="@id/center"
         android:gravity="center"
-        android:textColor="#FFC107" />
-
+        android:textColor="#FFC107"
+        />
     <Button
         android:id="@+id/B7"
         android:layout_width="30dp"
@@ -166,8 +163,8 @@
         android:layout_marginRight="50dp"
         android:layout_marginTop="65dp"
         android:layout_toLeftOf="@id/center"
-        android:background="@drawable/button" />
-
+        android:background="@drawable/button"
+        />
     <TextView
         android:id="@+id/tv7"
         android:layout_width="30dp"
@@ -182,6 +179,7 @@
         />
 
 
+
     <Button
         android:id="@+id/B5"
         android:layout_width="30dp"
@@ -193,7 +191,6 @@
         android:background="@drawable/button"
 
         />
-
     <TextView
         android:id="@+id/tv5"
         android:layout_width="30dp"
@@ -216,8 +213,8 @@
         android:layout_marginRight="80dp"
         android:layout_marginTop="10dp"
         android:layout_toLeftOf="@id/center"
-        android:background="@drawable/button" />
-
+        android:background="@drawable/button"
+        />
     <TextView
         android:id="@+id/tv8"
         android:layout_width="30dp"
@@ -241,8 +238,8 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="80dp"
         android:layout_toRightOf="@id/center"
-        android:background="@drawable/button" />
-
+        android:background="@drawable/button"
+        />
     <TextView
         android:id="@+id/tv3"
         android:layout_width="30dp"
@@ -264,8 +261,8 @@
         android:layout_marginLeft="80dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/center"
-        android:background="@drawable/button" />
-
+        android:background="@drawable/button"
+        />
     <TextView
         android:id="@+id/tv4"
         android:layout_width="30dp"
@@ -278,7 +275,6 @@
         android:textColor="#FFC107"
 
         />
-
     <Button
         android:id="@+id/B9"
         android:layout_width="30dp"
@@ -287,8 +283,8 @@
         android:layout_marginBottom="10dp"
         android:layout_marginRight="80dp"
         android:layout_toLeftOf="@id/center"
-        android:background="@drawable/button" />
-
+        android:background="@drawable/button"
+        />
     <TextView
         android:id="@+id/tv9"
         android:layout_width="30dp"
@@ -298,7 +294,9 @@
         android:layout_marginRight="113dp"
         android:layout_toLeftOf="@id/center"
         android:gravity="center"
-        android:textColor="#FFC107" />
+        android:textColor="#FFC107"
+        />
+
 
 
 </RelativeLayout>

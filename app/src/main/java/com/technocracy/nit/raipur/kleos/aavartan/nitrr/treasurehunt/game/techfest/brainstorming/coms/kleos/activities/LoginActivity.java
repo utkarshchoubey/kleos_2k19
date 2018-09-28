@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         userPreferences = new UserPreferences(this);
 
         textView = findViewById(R.id.kleos);
-        textView.setTextSize(getResources().getDimension(R.dimen.textsize));
+//        textView.setTextSize(getResources().getDimension(R.dimen.textsize));
 
         signupPage = findViewById(R.id.signupButton);
         loginPage = findViewById(R.id.loginButton);
@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
         phoneH = findViewById(R.id.phoneHint);
 
         signupPage.setTextColor(Color.parseColor("#FFFFFF"));
-        loginPage.setTextColor(Color.parseColor("#89FFFFFF"));
+        loginPage.setTextColor(Color.parseColor("#FFFFFF"));
 
         signup = findViewById(R.id.signup);
 
@@ -91,9 +91,10 @@ public class LoginActivity extends AppCompatActivity {
                 .position(ViewTooltip.Position.LEFT)
                 .text(message)
                 .textColor(Color.WHITE)
+                .textSize(2,12)
                 .color(Color.parseColor("#00BB84"))
-                .padding(2,2,2,2)
-                .corner(15)
+                .padding(0,0,0,0)
+                .corner(10)
                 .arrowWidth(15)
                 .arrowHeight(15)
                 .distanceWithView(0)
@@ -135,7 +136,7 @@ public class LoginActivity extends AppCompatActivity {
                         pass.setText("");
                         confirmPass.setText("");
                         confirmH.setVisibility(View.VISIBLE);
-                        signup.setText("Sign me Up");
+                        signup.setText("Sign Up");
                     }
                 }, 600);
 
@@ -203,7 +204,7 @@ public class LoginActivity extends AppCompatActivity {
                         phone.setText("");
                         pass.setText("");
                         confirmPass.setText("");
-                        signup.setText("Log me In");
+                        signup.setText("Log In");
                     }
                 }, 600);
 
@@ -232,7 +233,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void next(View view) {
 
-        if(String.valueOf(this.signup.getText()).equals("Sign me Up")){
+        if(String.valueOf(this.signup.getText()).equals("Sign Up")){
 
             if(!String.valueOf(pass.getText()).equals("") && !String.valueOf(phone.getText()).equals("") && !String.valueOf(confirmPass.getText()).equals("")){
                 if(String.valueOf(phone.getText()).length() != 10){
@@ -321,7 +322,7 @@ public class LoginActivity extends AppCompatActivity {
             }
 
         }
-        else if(String.valueOf(this.signup.getText()).equals("Log me In")){
+        else if(String.valueOf(this.signup.getText()).equals("Log In")){
 
             if(!String.valueOf(pass.getText()).equals("") && !String.valueOf(phone.getText()).equals("")){
                 if(String.valueOf(phone.getText()).length() != 10){

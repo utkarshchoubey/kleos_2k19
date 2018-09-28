@@ -2,14 +2,15 @@ package com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfe
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -49,16 +50,16 @@ public class ProfileSetupActivity extends AppCompatActivity {
 
         userPreferences = new UserPreferences(this);
 
-        firstname = findViewById(R.id.firstName);
-        lastname = findViewById(R.id.lastName);
-        college = findViewById(R.id.college);
-        email = findViewById(R.id.email);
-        circleImageView = findViewById(R.id.drawerImg);
+        firstname = (EditText) findViewById(R.id.firstName);
+        lastname = (EditText) findViewById(R.id.lastName);
+        college = (EditText)findViewById(R.id.college);
+        email = (EditText) findViewById(R.id.email);
+        circleImageView = (CircleImageView)findViewById(R.id.drawerImg);
 
-        indicatorView = findViewById(R.id.avi);
+        indicatorView = (AVLoadingIndicatorView)findViewById(R.id.avi);
         indicatorView.hide();
 
-        submit = findViewById(R.id.submit);
+        submit = (Button)findViewById(R.id.submit);
         Slice slice = new Slice(submit);
         slice.setRadius(8f);
         slice.setColor(Color.parseColor("#00BB84"));

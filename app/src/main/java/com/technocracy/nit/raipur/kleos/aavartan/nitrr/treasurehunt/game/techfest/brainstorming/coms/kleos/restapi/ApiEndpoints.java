@@ -54,4 +54,7 @@ public interface ApiEndpoints {
 
     @GET("questions/api/{id}")
     Call<Question> getQuestionbyId(@Path("id") String id);
+
+    @GET("questions/api/{id}/hints")
+    Call<Question> getHints(@Path("id") String id);
 }

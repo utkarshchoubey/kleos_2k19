@@ -14,7 +14,6 @@
         android:required="false" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
@@ -24,54 +23,63 @@
         android:supportsRtl="true"
         android:theme="@style/NoActionBar"
         tools:replace="android:theme">
+
         <activity
             android:name=".activities.SplashScreen"
-            android:screenOrientation="nosensor">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".activities.HomeActivity"
-            android:screenOrientation="nosensor" >
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            >
 
         </activity>
         <activity
             android:name=".activities.question6_dialer"
-            android:screenOrientation="nosensor" >
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            >
 
         </activity>
         <activity
             android:name=".activities.QuestionActivity"
             android:parentActivityName=".activities.HomeActivity"
-            android:screenOrientation="nosensor" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            />
         <activity
             android:name=".activities.LoginActivity"
-            android:screenOrientation="nosensor" >
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            >
 
         </activity>
         <activity
             android:name=".activities.OtpActivity"
-            android:screenOrientation="nosensor" >
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            >
 
         </activity>
         <activity
             android:name=".activities.ProfileSetupActivity"
-            android:screenOrientation="nosensor" >
+            android:screenOrientation="portrait"
+            >
 
         </activity>
         <activity
-            android:name=".activities.TeamActivity"
-            android:screenOrientation="nosensor" />
-        <activity
             android:name=".activities.SponsorsActivity"
-            android:screenOrientation="nosensor"/>
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activities.StoryLineActivity"
-            android:screenOrientation="nosensor">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            >
 
         </activity>
     </application>

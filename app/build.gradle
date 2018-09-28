@@ -5,8 +5,8 @@ android {
         applicationId "com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 9
-        versionName "2.0"
+        versionCode 10
+        versionName "2.001"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
