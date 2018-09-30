@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,7 @@ import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
+import com.squareup.picasso.Picasso;
 import com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.R;
 import com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.models.Question;
 import com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.models.User;
@@ -52,7 +54,7 @@ public class QuestionActivity extends YouTubeBaseActivity {
     ImageView img, img2;
     Toolbar toolbar;
     int pos;
-
+    private static final String BASE_URL = "http://18.220.64.65:8111";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +97,8 @@ public class QuestionActivity extends YouTubeBaseActivity {
 
         q = getIntent().getParcelableExtra("question");
         pos = getIntent().getExtras().getInt("id");
-
+        q.image=BASE_URL+q.image;
+        Log.d("ImageUrlQuestions",""+q.image);
         switch (pos) {
             case 1:
                 videoView.setVisibility(View.GONE);
@@ -124,7 +127,8 @@ public class QuestionActivity extends YouTubeBaseActivity {
             case 3:
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
-                img.setImageResource(R.drawable.q3a);
+//                img.setImageResource(R.drawable.q3a);
+                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
                 img2.setImageResource(R.drawable.q3b);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
@@ -134,7 +138,8 @@ public class QuestionActivity extends YouTubeBaseActivity {
             case 4:
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
-                img.setImageResource(R.drawable.q4);
+//                img.setImageResource(R.drawable.q4);
+                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
                 img2.setVisibility(View.GONE);
@@ -145,7 +150,8 @@ public class QuestionActivity extends YouTubeBaseActivity {
             case 5:
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
-                img.setImageResource(R.drawable.q5);
+//                img.setImageResource(R.drawable.q5);
+                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
                 img2.setImageResource(R.drawable.q5b);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
@@ -155,7 +161,8 @@ public class QuestionActivity extends YouTubeBaseActivity {
             case 6:
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
-                img.setImageResource(R.drawable.q6);
+//                img.setImageResource(R.drawable.q6);
+                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
                 img2.setVisibility(View.GONE);
@@ -171,7 +178,8 @@ public class QuestionActivity extends YouTubeBaseActivity {
             case 7:
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
-                img.setImageResource(R.drawable.q7);
+//                img.setImageResource(R.drawable.q7);
+                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
                 img2.setVisibility(View.GONE);
@@ -204,7 +212,8 @@ public class QuestionActivity extends YouTubeBaseActivity {
             case 10:
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
-                img.setImageResource(R.drawable.q10);
+//                img.setImageResource(R.drawable.q10);
+                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
                 img2.setVisibility(View.GONE);
@@ -215,7 +224,8 @@ public class QuestionActivity extends YouTubeBaseActivity {
             case 11:
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
-                img.setImageResource(R.drawable.box);
+//                img.setImageResource(R.drawable.box);
+                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
                 img2.setVisibility(View.GONE);

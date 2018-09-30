@@ -26,7 +26,7 @@ public class SplashScreen extends AwesomeSplash  {
 
         configSplash.setBackgroundColor(R.color.colorPrimary);
 
-        configSplash.setAnimCircularRevealDuration(2000);
+        configSplash.setAnimCircularRevealDuration(1000);
         Random r = new Random();
         int Low = 10;
         int High = 100;
@@ -35,15 +35,13 @@ public class SplashScreen extends AwesomeSplash  {
         else configSplash.setRevealFlagX(Flags.REVEAL_LEFT);
         configSplash.setRevealFlagY(Flags.REVEAL_BOTTOM);
         configSplash.setLogoSplash(R.drawable.splash); //or any other drawable
-        configSplash.setAnimLogoSplashDuration(2000); //int ms
+        configSplash.setAnimLogoSplashDuration(1500); //int ms
         configSplash.setAnimLogoSplashTechnique(Techniques.FadeIn);
         configSplash.setTitleSplash("Kleos 2K18");
         configSplash.setTitleTextColor(R.color.white);
         configSplash.setTitleTextSize(40f);
-        configSplash.setAnimTitleDuration(3000);
+        configSplash.setAnimTitleDuration(1000);
         configSplash.setAnimTitleTechnique(Techniques.FadeIn);
-//        configSplash.setTitleFont("fonts/caviardreams.ttf");
-
 
     }
 

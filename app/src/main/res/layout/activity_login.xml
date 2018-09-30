@@ -229,7 +229,7 @@
             android:id="@+id/signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="18dp"
             android:background="@color/button"
             android:onClick="next"
             android:padding="10dp"

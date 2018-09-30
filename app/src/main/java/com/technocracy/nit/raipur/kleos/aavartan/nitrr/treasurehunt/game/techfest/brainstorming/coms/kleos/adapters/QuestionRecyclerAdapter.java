@@ -83,6 +83,16 @@ public class QuestionRecyclerAdapter extends RecyclerView.Adapter<QuestionRecycl
                                 ct.startActivity(i);
                             }
                         });
+                        holder.questionContent.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent i = new Intent(ct, QuestionActivity.class);
+                                i.putExtra("question",response.body());
+                                i.putExtra("id",position+1);
+                                ct.startActivity(i);
+                            }
+                        });
+
                     }else {
                         Toasty.error(ct, "Some Thing Went Wrong", Toast.LENGTH_SHORT, true).show();
                     }
@@ -124,10 +134,6 @@ public class QuestionRecyclerAdapter extends RecyclerView.Adapter<QuestionRecycl
             questionContent = itemView.findViewById(R.id.questionContent);
             bookmark = itemView.findViewById(R.id.bookmark);
         }
-
-
-
-
     }
 
 }

@@ -130,9 +130,9 @@ public class HomeActivity extends AppCompatActivity {
                 }
 
                 depth.animate()
-                        .reduce(oldFragment, new ReduceConfiguration().setDuration(900))
-                        .exit(oldFragment, new ExitConfiguration().setDuration(500))
-                        .enter(newFragment, new EnterConfiguration().setDuration(600))
+                        .reduce(oldFragment, new ReduceConfiguration().setDuration(300))
+                        .exit(oldFragment, new ExitConfiguration().setDuration(300))
+                        .enter(newFragment, new EnterConfiguration().setDuration(400))
                         .start();
 
                 runOnUiThread(new Runnable() {
@@ -144,7 +144,7 @@ public class HomeActivity extends AppCompatActivity {
                             public void run() {
                                 getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                             }
-                        }, 2600);
+                        }, 1100);
 
                     }
                 });
@@ -185,9 +185,9 @@ public class HomeActivity extends AppCompatActivity {
                           newFragment = new QuestionsFragment();
                   }
                   depth.animate()
-                          .reduce(oldFragment, new ReduceConfiguration().setDuration(900))
-                          .exit(oldFragment, new ExitConfiguration().setDuration(500))
-                          .enter(newFragment, new EnterConfiguration().setDuration(600))
+                          .reduce(oldFragment, new ReduceConfiguration().setDuration(300))
+                          .exit(oldFragment, new ExitConfiguration().setDuration(300))
+                          .enter(newFragment, new EnterConfiguration().setDuration(400))
                           .start();
               }
 

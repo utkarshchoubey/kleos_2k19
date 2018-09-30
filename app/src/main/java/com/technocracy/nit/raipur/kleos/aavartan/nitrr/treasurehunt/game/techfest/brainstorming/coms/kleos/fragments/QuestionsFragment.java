@@ -35,7 +35,7 @@ public class QuestionsFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         userPreferences = new UserPreferences(getContext());
         View view = inflater.inflate(R.layout.fragment_question_page, container, false);

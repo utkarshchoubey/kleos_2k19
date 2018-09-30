@@ -3,6 +3,7 @@ package com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfe
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -49,6 +50,13 @@ public class question6_dialer extends Activity  implements View.OnClickListener{
         B8.setOnClickListener(this);
         B9.setOnClickListener(this);
         B10.setOnClickListener(this);
+        Toolbar toolbar=(Toolbar)findViewById(R.id.toolbarAnswer);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
         public void onClick(View v) {

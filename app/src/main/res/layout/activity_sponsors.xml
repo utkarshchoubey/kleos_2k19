@@ -5,19 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-
-    tools:context=".activities.SponsorsActivity">
+    tools:context=".activities.SponsorsActivity"
+    >
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/answerAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:layout_constraintBottom_toTopOf="@+id/mainRelativeLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        >
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbarAnswer"
@@ -58,7 +56,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-
     <TextView
         android:id="@+id/textview1"
         android:layout_width="wrap_content"
@@ -69,12 +66,7 @@
         android:text="Coming Soon..."
         android:textColor="#ffffff"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        />
 
     <TextView
         android:id="@+id/textview2"
@@ -86,11 +78,21 @@
         android:text="Stay Tuned"
         android:textColor="#ffffff"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+         />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:indicatorColor="@color/colorPrimaryDark"
+        app:indicatorName="LineScaleIndicator" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mainrv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/answerAppBar"
+        android:layout_margin="5dp" />
 
 </RelativeLayout>

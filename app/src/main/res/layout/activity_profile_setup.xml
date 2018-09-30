@@ -149,10 +149,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="College"
-            android:inputType="textCapWords|textPersonName"
+            android:inputType="textCapSentences"
             android:textColor="@color/white"
             android:textColorHint="@color/whiteFade"
             android:textAllCaps="true"
+
             />
     </android.support.design.widget.TextInputLayout>
 

@@ -1,6 +1,7 @@
 package com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.restapi;
 
 import com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.models.Question;
+import com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.models.Sponsor;
 import com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.models.User;
 
 import java.util.List;
@@ -57,4 +58,8 @@ public interface ApiEndpoints {
 
     @GET("questions/api/{id}/hints")
     Call<Question> getHints(@Path("id") String id);
+
+
+    @GET("sponsors/api/list")
+    Call<List<Sponsor>> getSponsors();
 }
