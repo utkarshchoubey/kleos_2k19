@@ -38,8 +38,19 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textColor="@color/colorPrimary"
+            android:typeface="serif"
             android:textSize="20dp"
             android:layout_alignParentTop="true"
+            />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bbn_fixed_item_ripple_color"
+            android:layout_below="@id/hinttv1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
             />
 
         <TextView
@@ -47,8 +58,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorAccent"
             android:textSize="18dp"
+            android:textStyle="italic"
             android:layout_alignParentBottom="true"
             />
     </RelativeLayout>

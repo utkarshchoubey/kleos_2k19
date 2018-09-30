@@ -32,7 +32,9 @@
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
                 android:onClick="exit"
-                app:srcCompat="@drawable/backbutton" />
+                app:srcCompat="@drawable/ic_back"
+                android:layout_marginEnd="20dp"
+                />
 
             <com.mursaat.extendedtextview.AnimatedGradientTextView
                 android:id="@+id/kleos"
@@ -42,9 +44,9 @@
                 android:lineSpacingExtra="8sp"
                 android:text="Storyline"
                 android:textAlignment="textStart"
-                android:textAllCaps="false"
+                android:textAllCaps="true"
                 android:textSize="36sp"
-                android:typeface="monospace"
+                android:typeface="sans"
                 app:angle="45"
                 app:colors="@array/main_gradient"
                 app:maxFPS="30"
@@ -71,7 +73,9 @@
             android:id="@+id/ll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="2dp"
+            >
 
             <ImageView
                 android:id="@+id/storyline"
@@ -102,7 +106,7 @@
                 android:id="@+id/t2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="* The answers are case sensitive."
+                android:text="* The Answers are Case InSensitive."
                 android:textColor="#ffffff"
                 android:textSize="15sp"
                 android:textStyle="bold" />

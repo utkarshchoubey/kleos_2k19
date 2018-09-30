@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "720955032496",
+    "firebase_url": "https://kleos-2017.firebaseio.com",
+    "project_id": "kleos-2017",
+    "storage_bucket": "kleos-2017.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720955032496:android:fb47abe9f6e36a98",
+        "android_client_info": {
+          "package_name": "com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720955032496-900l9q715kf6jp1hpsv9il6cfdh3ddtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl5sacPOcJLCeJYrcuYKrAUFOkyxm8miU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -84,6 +85,7 @@ public class ProfileFragment extends Fragment {
                         phoneV.setText(String.valueOf(response.body().username));
                         emailV.setText(String.valueOf(response.body().email));
                         level.setText("Level ".concat(String.valueOf(response.body().level)));
+//                        Log.d("Image","String "+userPreferences.getProfileImage().toString());
                         circleImageView.setImageURI(userPreferences.getProfileImage());
                     }
                     else{

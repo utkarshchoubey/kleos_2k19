@@ -15,22 +15,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingStart="5dp"
+        android:paddingEnd="5dp"
         android:text="TextView"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
         android:textSize="20dp"
         android:layout_alignParentTop="true"
         />
 
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/bbn_fixed_item_ripple_color"
+        android:layout_below="@id/hinttv1"
+        android:layout_margin="4dp"
+        />
     <TextView
         android:id="@+id/hinttv2"
         android:textSize="18dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/hinttv1"
+        android:layout_below="@+id/divider"
         android:paddingStart="5dp"
-        android:paddingTop="10dp"
+        android:paddingTop="5dp"
         android:text="TextView"
         android:textColor="@color/colorPrimary"
+        android:textStyle="normal"
+        android:typeface="monospace"
         />
 
 </RelativeLayout>

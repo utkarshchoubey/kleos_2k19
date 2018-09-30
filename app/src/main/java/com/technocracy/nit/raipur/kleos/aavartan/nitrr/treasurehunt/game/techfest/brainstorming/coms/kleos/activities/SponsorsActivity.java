@@ -27,8 +27,6 @@ public class SponsorsActivity extends AppCompatActivity {
                 .duration(900)
                 .playOn(findViewById(R.id.textview2));
     }
-
-
     public void exit(View view) {
         finish();
     }

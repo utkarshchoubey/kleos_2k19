@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -49,6 +50,7 @@ public class QuestionActivity extends YouTubeBaseActivity {
     Question q;
     YouTubePlayerView videoView;
     ImageView img, img2;
+    Toolbar toolbar;
     int pos;
 
     @Override
@@ -83,7 +85,13 @@ public class QuestionActivity extends YouTubeBaseActivity {
         textView3 = (TextView) findViewById(R.id.t3);
         textView4 = (TextView) findViewById(R.id.t4);
         textView5 = (TextView) findViewById(R.id.t5);
-
+        toolbar=(Toolbar)findViewById(R.id.toolbarAnswer);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         q = getIntent().getParcelableExtra("question");
         pos = getIntent().getExtras().getInt("id");

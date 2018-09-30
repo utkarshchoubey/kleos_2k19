@@ -32,7 +32,8 @@
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
                 android:onClick="exit"
-                app:srcCompat="@drawable/backbutton" />
+                app:srcCompat="@drawable/ic_back"
+                android:layout_marginEnd="20dp"/>
 
             <com.mursaat.extendedtextview.AnimatedGradientTextView
                 android:id="@+id/kleos"
@@ -42,9 +43,9 @@
                 android:lineSpacingExtra="8sp"
                 android:text="Sponsors"
                 android:textAlignment="textStart"
-                android:textAllCaps="false"
+                android:textAllCaps="true"
                 android:textSize="36sp"
-                android:typeface="monospace"
+                android:typeface="sans"
                 app:angle="45"
                 app:colors="@array/main_gradient"
                 app:maxFPS="30"
@@ -64,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="265dp"
+        android:layout_marginTop="224dp"
         android:text="Coming Soon..."
         android:textColor="#ffffff"
         android:textSize="40sp"
@@ -81,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="296dp"
+        android:layout_marginBottom="242dp"
         android:text="Stay Tuned"
         android:textColor="#ffffff"
         android:textSize="40sp"

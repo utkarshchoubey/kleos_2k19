@@ -33,7 +33,7 @@
                 android:lineSpacingExtra="8sp"
                 android:text="Questions"
                 android:textAlignment="textStart"
-                android:textAllCaps="false"
+                android:textAllCaps="true"
                 android:textSize="36sp"
                 android:typeface="monospace"
                 app:angle="45"

@@ -80,7 +80,7 @@ public class UserPreferences {
         editor.apply();
     }
     public Uri getProfileImage(){
-        Uri defaultImageUri = Uri.parse("android.resource://com.technocracy.nitraipur.kleos2k18/"+ R.drawable.profilesample);
+        Uri defaultImageUri = Uri.parse("android.resource://com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos/"+ R.drawable.profilesample);
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ct);
         return Uri.parse(preferences.getString("ProfileImageUri", defaultImageUri.toString()));
     }
