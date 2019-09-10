@@ -37,7 +37,7 @@ public class SplashScreen extends AwesomeSplash  {
         configSplash.setLogoSplash(R.drawable.splash); //or any other drawable
         configSplash.setAnimLogoSplashDuration(1500); //int ms
         configSplash.setAnimLogoSplashTechnique(Techniques.FadeIn);
-        configSplash.setTitleSplash("Kleos 2K18");
+        configSplash.setTitleSplash("");
         configSplash.setTitleTextColor(R.color.white);
         configSplash.setTitleTextSize(40f);
         configSplash.setAnimTitleDuration(1000);

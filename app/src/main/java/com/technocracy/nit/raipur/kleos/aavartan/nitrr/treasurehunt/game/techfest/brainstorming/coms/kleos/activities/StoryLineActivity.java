@@ -13,7 +13,6 @@ import static maes.tech.intentanim.CustomIntent.customType;
 
 public class StoryLineActivity extends AppCompatActivity {
 
-    ImageZoomHelper imageZoomHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,17 +20,13 @@ public class StoryLineActivity extends AppCompatActivity {
         setContentView(R.layout.activity_story_line);
         customType(this, "fadein-to-fadeout");
 
-        imageZoomHelper = new ImageZoomHelper(this);
 
-        ImageZoomHelper.setViewZoomable(findViewById(R.id.storyline));
+
 
     }
     public void exit(View view){
         finish();
     }
 
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        return imageZoomHelper.onDispatchTouchEvent(ev) || super.dispatchTouchEvent(ev);
-    }
+
 }

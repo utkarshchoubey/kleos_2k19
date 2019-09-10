@@ -1,6 +1,7 @@
 package com.technocracy.nit.raipur.kleos.aavartan.nitrr.treasurehunt.game.techfest.brainstorming.coms.kleos.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -55,7 +56,7 @@ public class ProfileFragment extends Fragment {
         TextView collegeV = view.findViewById(R.id.collegeV);
         TextView level = view.findViewById(R.id.levelV);
         AVLoadingIndicatorView avi = view.findViewById(R.id.avi);
-        CircleImageView circleImageView = view.findViewById(R.id.profile_image);
+      //  CircleImageView circleImageView = view.findViewById(R.id.);
 
         avi.show();
         nameV.setVisibility(View.INVISIBLE);
@@ -63,7 +64,7 @@ public class ProfileFragment extends Fragment {
         phoneV.setVisibility(View.INVISIBLE);
         collegeV.setVisibility(View.INVISIBLE);
         level.setVisibility(View.INVISIBLE);
-        circleImageView.setVisibility(View.INVISIBLE);
+        //circleImageView.setVisibility(View.INVISIBLE);
 
         ApiEndpoints apiBase= ApiBase.getClient().create(ApiEndpoints.class);
         Call<User> userCall=apiBase.getDetails(userPreferences.getUsername());
@@ -78,15 +79,16 @@ public class ProfileFragment extends Fragment {
                         phoneV.setVisibility(View.VISIBLE);
                         collegeV.setVisibility(View.VISIBLE);
                         level.setVisibility(View.VISIBLE);
-                        circleImageView.setVisibility(View.VISIBLE);
+                        //circleImageView.setVisibility(View.VISIBLE);
 
                         nameV.setText(String.valueOf(response.body().firstName).concat(" ".concat(String.valueOf(response.body().lastName)) ));
                         collegeV.setText(String.valueOf(response.body().college));
                         phoneV.setText(String.valueOf(response.body().username));
                         emailV.setText(String.valueOf(response.body().email));
                         level.setText("Level ".concat(String.valueOf(response.body().level)));
+
 //                        Log.d("Image","String "+userPreferences.getProfileImage().toString());
-                        circleImageView.setImageURI(userPreferences.getProfileImage());
+                       // circleImageView.setImageURI(userPreferences.getProfileImage());
                     }
                     else{
                         Toasty.error(getContext(), "Some Thing Went Wrong", Toast.LENGTH_SHORT, true).show();

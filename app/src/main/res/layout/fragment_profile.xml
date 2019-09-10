@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/profileFrameLayout"
@@ -9,118 +9,150 @@
     tools:context=".fragments.ProfileFragment">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/profile_image"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="128dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/profilesample"
-        app:civ_border_color="@color/colorPrimaryDark"
-        app:civ_border_width="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/levelV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:padding="10dp"
-        android:text="Level 12"
-        android:textColor="#ffffff"
-        android:textSize="22dp"
-        android:textStyle="normal"
-        android:typeface="monospace"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <RelativeLayout
+        android:id="@+id/recy"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/levelV"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_height="250dp">
 
-        <TextView
-            android:id="@+id/nameV"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            android:drawablePadding="12dp"
-            android:drawableStart="@drawable/name"
-            android:paddingLeft="15dp"
-            android:paddingRight="10dp"
-            android:paddingTop="5dp"
-            android:text="Name"
-            android:textColor="#ffffff"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:layout_height="200dp"
+            android:background="#00CED1"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/phoneV"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/profile" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="170dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/levelV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/recy"
+                            android:padding="10dp"
+                            android:text="Level 12"
+                            android:textColor="#00FFFF"
+                            android:textSize="22dp"
+                            android:textStyle="normal"
+                            android:typeface="monospace"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.44"
+
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
+            android:layout_below="@+id/recy"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            android:drawablePadding="5dp"
-            android:drawableStart="@drawable/phone"
-            android:paddingLeft="15dp"
-            android:paddingTop="5dp"
-            android:text="Phone Number"
-            android:textColor="#ffffff"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-        <TextView
-            android:id="@+id/emailV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            android:drawablePadding="10dp"
-            android:drawableStart="@drawable/mail"
-            android:paddingLeft="15dp"
-            android:paddingTop="5dp"
-            android:text="someone@gmail.com"
-            android:textColor="#ffffff"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/nameV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:drawableStart="@drawable/name"
+                android:drawablePadding="12dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:text="Name"
+                android:textColor="#00FFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/collegeV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawablePadding="10dp"
-            android:drawableStart="@drawable/college"
-            android:paddingLeft="15dp"
-            android:paddingTop="5dp"
-            android:text="College"
-            android:textColor="#ffffff"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            />
+            <TextView
+                android:id="@+id/phoneV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_marginBottom="25dp"
+                android:drawableStart="@drawable/phone"
+                android:drawablePadding="5dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:text="Phone Number"
+                android:textColor="#00FFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/emailV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+
+                android:drawableStart="@drawable/mail"
+                android:drawablePadding="10dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:text="someone@gmail.com"
+                android:textColor="#00FFFF"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/collegeV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:drawableStart="@drawable/college"
+                android:drawablePadding="10dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:text="College"
+                android:textAllCaps="true"
+                android:textColor="#00FFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
 
     <com.wang.avi.AVLoadingIndicatorView
         android:id="@+id/avi"
@@ -128,10 +160,7 @@
         android:layout_height="wrap_content"
         app:indicatorColor="@color/colorPrimaryDark"
         app:indicatorName="LineScaleIndicator"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerInParent="true"/>
 
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

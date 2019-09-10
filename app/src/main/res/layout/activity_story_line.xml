@@ -77,12 +77,11 @@
             android:padding="2dp"
             >
 
+
             <ImageView
-                android:id="@+id/storyline"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/storymain" />
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:src="@drawable/kl"/>
 
             <TextView
                 android:id="@+id/content"
@@ -171,7 +170,15 @@
                 android:id="@+id/t9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Namrata:8109308499"
+                android:text="Aakansha:9407708932"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/t10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ashi:7000676600"
                 android:textColor="#ffffff"
                 android:textSize="15sp"
                 android:textStyle="bold" />

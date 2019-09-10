@@ -283,6 +283,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.i("Message", String.valueOf(response.body().message));
                             if(String.valueOf(response.body().message).equals("OTP Sent Successfully")) {
                                 userPreferences.setUsername(phoneNo);
+
                                 Intent i = new Intent(LoginActivity.this, OtpActivity.class);
                                 startActivity(i);
                                 finish();
@@ -366,6 +367,10 @@ public class LoginActivity extends AppCompatActivity {
                                    userCall.enqueue(new Callback<User>() {
                                        @Override
                                        public void onResponse(Call<User> call, Response<User> response) {
+                                           Log.d("Login",response.body().toString());
+                                           Log.d("Login",response.body().username.toString());
+
+
                                            if(response.isSuccessful()){
                                                if(!String.valueOf(response.body().email).equals("")){
                                                    userPreferences.setName(response.body().firstName.concat(" "+ response.body().lastName));
@@ -379,6 +384,7 @@ public class LoginActivity extends AppCompatActivity {
                                                indicatorView.hide();
                                                YoYo.with(Techniques.FadeIn).duration(500).playOn(view);
                                                signup.setVisibility(View.VISIBLE);
+                                               Log.d("Login","response is unsuccessful");
                                                loginPage.setEnabled(true);
                                                signupPage.setEnabled(true);
                                            }
@@ -389,6 +395,7 @@ public class LoginActivity extends AppCompatActivity {
                                            indicatorView.hide();
                                            YoYo.with(Techniques.FadeIn).duration(500).playOn(view);
                                            signup.setVisibility(View.VISIBLE);
+                                           Log.d("Login","response failure");
                                            loginPage.setEnabled(true);
                                            signupPage.setEnabled(true);
                                            NoInternetDialog noInternetDialog = new NoInternetDialog.Builder(LoginActivity.this).build();

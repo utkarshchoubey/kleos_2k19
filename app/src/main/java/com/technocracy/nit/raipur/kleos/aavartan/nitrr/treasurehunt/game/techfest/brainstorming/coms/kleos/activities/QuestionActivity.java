@@ -54,7 +54,7 @@ public class QuestionActivity extends YouTubeBaseActivity {
     ImageView img, img2;
     Toolbar toolbar;
     int pos;
-    private static final String BASE_URL = "http://18.220.64.65:8111";
+    private static final String BASE_URL = "http://aavartan.nitrr.ac.in:8080";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,8 +103,8 @@ public class QuestionActivity extends YouTubeBaseActivity {
             case 1:
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
-                linearLayout.setVisibility(View.VISIBLE);
-                linearLayout.setEnabled(true);
+                linearLayout.setVisibility(View.GONE);
+                linearLayout.setEnabled(false);
                 img.setVisibility(View.GONE);
                 img.setEnabled(false);
                 img2.setVisibility(View.GONE);
@@ -129,8 +129,10 @@ public class QuestionActivity extends YouTubeBaseActivity {
                 videoView.setEnabled(false);
 //                img.setImageResource(R.drawable.q3a);
                 Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
-                img2.setImageResource(R.drawable.q3b);
+                //img2.setImageResource(R.drawable.q3b);
                 linearLayout.setVisibility(View.GONE);
+                img2.setVisibility(View.GONE);
+                img2.setEnabled(false);
                 linearLayout.setEnabled(false);
                 dialer.setVisibility(View.GONE);
                 dialer.setEnabled(false);
@@ -139,9 +141,11 @@ public class QuestionActivity extends YouTubeBaseActivity {
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
 //                img.setImageResource(R.drawable.q4);
-                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
+              //  Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
+                img.setVisibility(View.GONE);
+                img.setEnabled(false);
                 img2.setVisibility(View.GONE);
                 img2.setEnabled(false);
                 dialer.setVisibility(View.GONE);
@@ -151,8 +155,12 @@ public class QuestionActivity extends YouTubeBaseActivity {
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
 //                img.setImageResource(R.drawable.q5);
-                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
-                img2.setImageResource(R.drawable.q5b);
+              //  Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
+
+                img.setVisibility(View.GONE);
+                img.setEnabled(false);
+                img2.setVisibility(View.GONE);
+                img2.setEnabled(false);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
                 dialer.setVisibility(View.GONE);
@@ -162,24 +170,23 @@ public class QuestionActivity extends YouTubeBaseActivity {
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
 //                img.setImageResource(R.drawable.q6);
-                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
+               // Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
                 linearLayout.setVisibility(View.GONE);
+                img.setVisibility(View.GONE);
+                img.setEnabled(false);
                 linearLayout.setEnabled(false);
                 img2.setVisibility(View.GONE);
                 img2.setEnabled(false);
-                dialer.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(QuestionActivity.this, question6_dialer.class);
-                        startActivity(intent);
-                    }
-                });
+                dialer.setVisibility(View.GONE);
+                dialer.setEnabled(false);
                 break;
             case 7:
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
 //                img.setImageResource(R.drawable.q7);
-                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
+               // Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
+                img.setVisibility(View.GONE);
+                img.setEnabled(false);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
                 img2.setVisibility(View.GONE);
@@ -188,32 +195,32 @@ public class QuestionActivity extends YouTubeBaseActivity {
                 dialer.setEnabled(false);
                 break;
             case 8:
-                img.setVisibility(View.GONE);
-                img.setEnabled(false);
+                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
                 img2.setVisibility(View.GONE);
                 img2.setEnabled(false);
                 dialer.setVisibility(View.GONE);
                 dialer.setEnabled(false);
-                playVideo("a2ehVHdEsWw", videoView);
+                videoView.setVisibility(View.GONE);
+                videoView.setEnabled(false);
                 break;
             case 9:
-                img.setVisibility(View.GONE);
-                img.setEnabled(false);
+                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
                 img2.setVisibility(View.GONE);
                 img2.setEnabled(false);
                 dialer.setVisibility(View.GONE);
                 dialer.setEnabled(false);
-                playVideo("HIStRZM1jMM", videoView);
+                videoView.setVisibility(View.GONE);
+                videoView.setEnabled(false);
                 break;
             case 10:
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
 //                img.setImageResource(R.drawable.q10);
-                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
+               // Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
                 img2.setVisibility(View.GONE);
@@ -225,7 +232,8 @@ public class QuestionActivity extends YouTubeBaseActivity {
                 videoView.setVisibility(View.GONE);
                 videoView.setEnabled(false);
 //                img.setImageResource(R.drawable.box);
-                Picasso.get().load(q.image).placeholder(R.drawable.temp_photo).into(img);
+                img.setVisibility(View.GONE);
+                img.setEnabled(false);
                 linearLayout.setVisibility(View.GONE);
                 linearLayout.setEnabled(false);
                 img2.setVisibility(View.GONE);

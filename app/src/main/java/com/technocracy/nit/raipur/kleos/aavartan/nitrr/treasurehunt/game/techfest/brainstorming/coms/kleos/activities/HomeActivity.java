@@ -206,7 +206,7 @@ public class HomeActivity extends AppCompatActivity {
         TextView nameV = v.findViewById(R.id.drawerName);
         nameV.setText(preferences.getName());
         TextView levelV = v.findViewById(R.id.drawerLevel);
-        levelV.setText("Level ".concat(preferences.getLevel()));
+        levelV.setText("");
         Button logout = v.findViewById(R.id.logoutB);
 //        Button teamB =(Button) v.findViewById(R.id.teamB);
         Button storylineB = v.findViewById(R.id.storylineB);

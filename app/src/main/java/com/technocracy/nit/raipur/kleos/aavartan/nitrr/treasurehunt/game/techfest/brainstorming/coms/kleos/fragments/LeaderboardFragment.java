@@ -53,7 +53,7 @@ public class LeaderboardFragment extends Fragment {
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
               if(response.isSuccessful()){
                   indicatorView.hide();
-                  if(response.body().size() >= 10){
+                  if(response.body().size() >= 1){
                       def.setVisibility(View.GONE);
                       rv.setVisibility(View.VISIBLE);
                       LinearLayoutManager layout = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
